@@ -178,9 +178,7 @@ Let
 
 At the **break-even point**, extra switching cost offsets the RL energy savings:
 
-[
-8723,p = 1988,c \quad \Rightarrow \quad c = \frac{8723,p}{1988}.
-]
+8723 × p = 1988 × c  →  c = (8723 × p) / 1988
 
 Thus:
 
