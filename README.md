@@ -110,9 +110,7 @@ The project explores both **heuristic** and **reinforcement learning (RL)** cont
 * **State:** Discretised reservoir levels + discrete demand index
 * **Action:** Vector of active pump counts across all stations
 * **Reward:**
-  [
-  r_t = -(\text{unmet demand}) - \text{switching penalty} - \text{energy penalty} - \text{level deviation} - \text{violation penalty}
-  ]
+  rₜ = −(unmet_demand) − switching_penalty − energy_penalty − level_deviation − violation_penalty
 * **Safety Layer:** Rejects or adjusts unsafe actions to keep training stable.
 * **Exploration:** ε-greedy with decaying ε.
 * **Training buffer:** Training used stricter safety bounds (0.32–0.88) so that evaluation under true limits (0.30–0.90) yields no violations.
