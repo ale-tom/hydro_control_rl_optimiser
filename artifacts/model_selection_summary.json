@@ -1,0 +1,371 @@
+{
+  "timestamp": "2025-08-29T17:51:49",
+  "data": {
+    "demand_len": 212545,
+    "train_len": 1440,
+    "test_len": 2880,
+    "n_splits": 5,
+    "gap": 0
+  },
+  "discretiser": {
+    "level_bins": [
+      0.4,
+      0.6,
+      0.8
+    ],
+    "n_tanks": 4
+  },
+  "safety_limits": {
+    "lower": 0.32,
+    "upper": 0.88
+  },
+  "grids": {
+    "heuristic_prop_gains": [
+      0.02,
+      0.05
+    ],
+    "heuristic_switch_penalties": [
+      50.0,
+      100.0
+    ],
+    "rl_switch_penalties": [
+      3.0,
+      5.0,
+      10.0
+    ],
+    "rl_unmet_penalties": [
+      1.0,
+      5.0
+    ]
+  },
+  "inner_cv": {
+    "use_inner_cv": true,
+    "n_inner_splits": 3,
+    "val_fraction": 0.25,
+    "rl_inner_seeds": 5,
+    "rl_inner_episodes": 8
+  },
+  "outer_eval": {
+    "rl_test_seeds": 7,
+    "rl_seed_base": 4242,
+    "rl_outer_episodes": 12
+  },
+  "best": {
+    "heuristic_params": [
+      0.02,
+      50.0
+    ],
+    "rl_params": [
+      10.0,
+      1.0
+    ]
+  },
+  "nested": {
+    "heur_test_metrics": [
+      [
+        963755.7367330005,
+        119
+      ],
+      [
+        847943.6255096076,
+        139
+      ],
+      [
+        811516.5914599957,
+        132
+      ],
+      [
+        1172628.4642004457,
+        90
+      ],
+      [
+        945267.1895330435,
+        118
+      ]
+    ],
+    "rl_test_metrics": [
+      [
+        961643.639159031,
+        574
+      ],
+      [
+        838599.8033121565,
+        1548
+      ],
+      [
+        801884.4791202996,
+        478
+      ],
+      [
+        1165196.3819936854,
+        4462
+      ],
+      [
+        951422.3337659828,
+        501
+      ]
+    ],
+    "heur_val_costs": [
+      {
+        "pg": 0.02,
+        "sp": 50.0,
+        "mean_costs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pg": 0.02,
+        "sp": 100.0,
+        "mean_costs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pg": 0.05,
+        "sp": 50.0,
+        "mean_costs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "pg": 0.05,
+        "sp": 100.0,
+        "mean_costs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "rl_val_costs": [
+      {
+        "switch": 3.0,
+        "unmet": 1.0,
+        "mean_costs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "switch": 3.0,
+        "unmet": 5.0,
+        "mean_costs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "switch": 5.0,
+        "unmet": 1.0,
+        "mean_costs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "switch": 5.0,
+        "unmet": 5.0,
+        "mean_costs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "switch": 10.0,
+        "unmet": 1.0,
+        "mean_costs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "switch": 10.0,
+        "unmet": 5.0,
+        "mean_costs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "switch": 20.0,
+        "unmet": 1.0,
+        "mean_costs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "switch": 20.0,
+        "unmet": 5.0,
+        "mean_costs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "switch": 50.0,
+        "unmet": 1.0,
+        "mean_costs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "switch": 50.0,
+        "unmet": 5.0,
+        "mean_costs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "switch": 100.0,
+        "unmet": 1.0,
+        "mean_costs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "switch": 100.0,
+        "unmet": 5.0,
+        "mean_costs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  },
+  "global_summary": {
+    "best_heuristic_params": [
+      0.02,
+      50.0
+    ],
+    "best_rl_params": [
+      10.0,
+      1.0
+    ],
+    "heuristic": {
+      "energy_per_fold": [
+        963755.7367330005,
+        847943.6255096076,
+        811516.5914599957,
+        1172628.4642004457,
+        945267.1895330435
+      ],
+      "switches_per_fold": [
+        119,
+        139,
+        132,
+        90,
+        118
+      ],
+      "violation_per_fold": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "unmet_per_fold": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "energy_mean": 948222.3214872187,
+      "energy_sd": 140847.79921136485,
+      "switch_mean": 119.6,
+      "switch_sd": 18.769656363396745,
+      "violation_rate_mean": 0.0,
+      "unmet_rate_mean": 0.0
+    },
+    "rl": {
+      "energy_mean_per_fold": [
+        956967.3470001601,
+        835889.7463848522,
+        801478.3436576008,
+        1165205.660570329,
+        937956.5632066963
+      ],
+      "switch_mean_per_fold": [
+        2262.1428571428573,
+        2023.7142857142858,
+        595.1428571428571,
+        4960.285714285715,
+        697.7142857142857
+      ],
+      "violation_rate_per_fold": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "unmet_rate_per_fold": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "energy_mean": 939499.5321639277,
+      "energy_sd": 142333.76083562162,
+      "switch_mean": 2107.8,
+      "switch_sd": 1763.8055610363797,
+      "violation_rate_mean": 0.0,
+      "unmet_rate_mean": 0.0
+    }
+  }
+}

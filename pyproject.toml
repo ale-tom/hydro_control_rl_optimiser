@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hydro_control_rl_optimiser"
+version = "0.1.0"
+description = "Prototype reinforcement learning controller for a multi-stage pumping system that supplies cooling water to a critical industrial facility"
+readme = "README.md"
+requires-python = ">= 3.12"
+license = { text = "MIT" }
+authors = [
+  { name = "Alessandro Tomassini", email = "alessandro.tomasini@gmail.com" }
+]
+dependencies = [
+  # Add runtime deps here, e.g. "requests>=2.31"
+  "numpy (>=2.3.2,<3.0.0)",
+  "pandas (>=2.3.2,<3.0.0)",
+  "matplotlib (>=3.10.5,<4.0.0)",
+  "ipykernel (>=6.30.1,<7.0.0)",
+  "scikit-learn (>=1.7.1,<2.0.0)",
+  "seaborn (>=0.13.2,<0.14.0)",
+  "jinja2 (>=3.1.6,<4.0.0)"
+]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://github.com/ale-tom/hydro_control_rl_optimiser"
+Issues = "https://github.com/ale-tom/hydro_control_rl_optimiser/issues"
+
+# --- Poetry dependency groups (used by: poetry install --with dev) ---
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+ruff = "^0.5.0"
+black = "^24.0"
+mypy = "^1.11"
+build = "^1.2"
+twine = "^5.0"
+
+# --- Setuptools "src" layout ---
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["hydro_control_rl_optimiser*"]
+
+# --- Tooling config ---
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = []
+
+[tool.mypy]
+python_version = "3.12"
+strict = false
+warn_return_any = true
+warn_unused_configs = true
