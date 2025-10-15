@@ -213,3 +213,6 @@ No proprietary or client-specific information is included.
 
 ---
 
+## License
+
+This project is licensed under the [MIT License](LICENSE).
