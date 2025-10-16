@@ -8,7 +8,8 @@ A reinforcement-learning–based controller for a **multi-stage water pumping ne
 <img src="artifacts/schema.png" alt="Water pumping network" width="900">
 </p>
 
-Author: Alessandro Tomassini <alessandro.tomassini@gmail.com>
+Author: **Alessandro Tomassini**
+
 ---
 
 ## 🚀 Quick Start
